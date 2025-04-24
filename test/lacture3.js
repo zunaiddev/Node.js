@@ -9,6 +9,9 @@ const http = require('http');
 
 const server = http.createServer((req, res) => {
     console.log(req.headers);
+    res.writeHead(200, {'Content-Type': 'json'});
+    res.write('Hello World!');
+    res.end();
 });
 
 server.listen(8080, function () {
